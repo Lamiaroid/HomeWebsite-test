@@ -1,4 +1,4 @@
-logs/*
+logs/*.log
 database/data/*
 database/backup/*
 
