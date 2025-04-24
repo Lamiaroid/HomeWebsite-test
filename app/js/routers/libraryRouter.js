@@ -11,7 +11,6 @@ const { setSetting, saveSettings, getSetting } = require("../settings.js");
 
 //это не должен быть контроллер???  сделать toolsController?
 const { generateVkPostForDiscord } = require("../controllers/vkImporterController.js");
-const { generateCompress } = require("../controllers/comperssorTestControler.js");
 const asyncWrap = require("../asyncWrap.js");
 const constants = require("../constants.js");
 const postsGenerator = require("../helpers/content/postsGenerator.js");
@@ -139,13 +138,6 @@ libraryRouter.get("/VKIMPORTER", async function (request, response, next) {
     //throw new Error("Here it is");
 
     await generateVkPostForDiscord(request, response);
-});
-
-// это чисто для тестов, потом можно удалить
-libraryRouter.get("/compress", async function (request, response, next) {
-    //throw new Error("Here it is");
-
-    await generateCompress(request, response);
 });
 
 // это чисто для тестов, потом можно удалить
