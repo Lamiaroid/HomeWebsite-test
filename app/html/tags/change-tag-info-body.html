@@ -1,0 +1,33 @@
+<div class="change-tag-info-container">
+    <div class="change-tag-header">
+        <div class="tag-name-outer">
+            <div class="tag-name-inner">
+                <select id="tag-name-selector" name="tagNameSelector" size="4">
+                    <%= tagsList %>
+                </select>
+            </div>
+        </div>
+
+        <form action="<%= deleteTagAction %>" method="post" id="delete-tag-form">
+            <input id="delete-tag" type="submit" value="<%= deleteTag %>" disabled />
+        </form>
+    </div>
+
+    <form action="<%= updateTagAction %>" id="update-tag-form" method="post" autocomplete="off">
+        <div class="next-container-item">
+            <div class="content-info-title"><%= tagName %></div>
+            <input id="tag-name" name="tagName" disabled />
+            <input class="secret" id="tag-secret" name="tagOriginalName" />
+        </div>
+
+        <div class="next-container-item" id="status-container"></div>
+
+        <input
+            class="next-container-item"
+            id="ready-to-change-button"
+            type="submit"
+            value="<%= readyToChange %>"
+            disabled
+        />
+    </form>
+</div>

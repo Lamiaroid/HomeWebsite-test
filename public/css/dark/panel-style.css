@@ -1,0 +1,918 @@
+.banner {
+    margin: 0;
+    height: 7vh;
+}
+
+.banner-shouldPinBanner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #232529;
+    /*нужно пересмотреть индексы, чтобы не было этих 1000 а были норм значения*/
+    z-index: 1001;
+}
+
+.banner-container {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+.banner-gear {
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-link {
+    color: #c0b7b7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.banner-gear:hover,
+.banner-link:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+.banner-gear:hover {
+    transform: rotate(180deg);
+}
+
+.gear-settings-area-container {
+    position: absolute;
+    width: 500px;
+    height: 320px;
+    border-radius: 1px;
+    left: 20vw;
+    top: 7vh;
+    background-color: #232529;
+    z-index: 1050;
+}
+
+.gear-settings-area-container-shouldPinBanner {
+    position: fixed;
+}
+
+.gear-settings-area {
+    position: relative;
+    background-color: rgba(10, 9, 9, 0.637);
+    width: 100%;
+    height: 100%;
+}
+
+.menu-reset-settings {
+    position: absolute;
+    margin-left: 460px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-reset-settings:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+.menu-range-input-area label {
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+}
+
+.menu-range-input-area {
+    margin-bottom: 0.7vh;
+    text-align: center;
+}
+
+.menu-checkbox-input-area {
+    margin-left: 10.5%;
+    margin-bottom: 0.7vh;
+}
+
+.menu-range-input {
+    appearance: none;
+    width: 50%;
+    height: 0.4vh;
+    background-color: #232529;
+    box-shadow: inset 0 0 0.5em rgb(104 99 99), 0 0 0.5em rgb(104 99 99);
+    background-image: linear-gradient(
+        90deg,
+        #232529 var(--percentage),
+        rgba(202, 202, 202, 0.507) var(--percentage)
+    );
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.menu-range-input:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.2em rgb(255 100 0), 0 0 0.5em rgb(255 100 0);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 100, 0, 0.4) var(--percentage),
+        transparent var(--percentage)
+    );
+}
+
+.menu-range-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.2vh;
+    height: 1.2vh;
+    background: radial-gradient(rgba(128, 126, 126, 1), rgba(27, 27, 27, 1));
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.menu-range-input:hover.menu-range-input::-webkit-slider-thumb {
+    background: radial-gradient(rgba(255, 100, 0, 1), rgba(27, 27, 27, 0.733));
+}
+
+.menu-checkbox-input {
+    appearance: none;
+}
+
+.menu-checkbox-input + label:before {
+    content: " ";
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 0.5vh;
+    width: 2vh;
+    height: 2vh;
+    background: #232529;
+    border: 1px solid rgba(104, 99, 99, 1);
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+.menu-checkbox-input + label {
+    height: 2vh;
+}
+
+.menu-checkbox-input:hover + label:before {
+    color: rgba(255, 100, 0, 1);
+    box-shadow: inset 0 0 0.3em rgb(255 100 0), 0 0 0.5em rgb(255 100 0);
+    background: #000;
+    border: 1px solid rgba(255, 100, 0, 1);
+}
+
+.menu-checkbox-input:checked + label:before {
+    content: "✔";
+}
+
+.go-back {
+    font-size: 32px;
+}
+
+.arrow {
+    display: inline-block;
+    margin-top: 50vh;
+    border: solid #c0b7b7;
+    border-width: 0 0.15vw 0.15vw 0;
+    padding: 0.4vw;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.right {
+    transform: rotate(-45deg);
+}
+
+.panel {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2000;
+}
+
+.panel-activator {
+    position: absolute;
+    transition: 1s;
+    z-index: 41;
+}
+
+.panel-content {
+    position: absolute;
+    margin-left: -22em;
+    height: 100%;
+    width: 22em;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: inset 0 0 1em rgb(104, 99, 99), 0 0 1em rgb(105, 101, 101);
+    transition: 1s;
+    z-index: 40;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel-navigation {
+    display: flex;
+    margin: 5vh 2vw 3vh 2vw;
+    justify-content: space-between;
+}
+
+#panel-move-left {
+    transform: rotate(180deg);
+}
+
+#panel-move-left,
+#panel-move-right {
+    transition: 0.7s;
+}
+
+#panel-move-left:hover,
+#panel-move-right:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+.panel-button {
+    display: inline-block;
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    height: 3em;
+    width: 18em;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(104, 99, 99), 0 0 1em rgb(104, 99, 99);
+    font-family: Arial;
+    transition: 1s;
+    z-index: 30;
+}
+
+.panel-button:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.panel-open {
+    animation: panel-activator-move 0.7s linear both, panel-activator-rotate 1s both;
+}
+
+.panel-close {
+    animation: panel-activator-move 0.7s reverse linear both,
+        panel-activator-rotate 1s reverse linear both;
+}
+
+@keyframes panel-activator-move {
+    0% {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    50% {
+        margin-left: 12em;
+        margin-top: 1.25vh;
+    }
+
+    100% {
+        margin-left: 24em;
+        margin-top: 2.5vh;
+    }
+}
+
+@keyframes panel-activator-rotate {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+#menu-switcher input,
+#panel-switcher input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+#menu-switcher-composition,
+#panel-switcher-composition,
+#panel-switcher,
+#menu-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.slider {
+    height: 1vw;
+    width: 4vw;
+    cursor: pointer;
+    background: #232529;
+    box-shadow: inset 0 0 0.5em rgb(104, 99, 99), 0 0 0.5em rgb(104, 99, 99);
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    height: 1vw;
+    width: 1vw;
+    content: "";
+    background: radial-gradient(rgba(128, 126, 126, 0.733), rgba(27, 27, 27, 0.733));
+    transition: 0.4s;
+}
+
+input:checked ~ .slider {
+    box-shadow: inset 0 0 0.5em rgba(255, 100, 0, 1), 0 0 0.5em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+input:checked ~ .slider:before {
+    transform: translateX(3.05vw);
+    background: radial-gradient(rgba(255, 100, 0, 1), rgba(27, 27, 27, 0.733));
+}
+
+.slider.round {
+    border-radius: 50px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.menu-container {
+    margin: 0;
+    margin-left: -15vw;
+    height: 100vh;
+    flex-basis: 15vw;
+}
+
+.menu-container-away {
+    animation: menu-dissapearance 0.7s linear both;
+}
+
+.menu-container-back {
+    animation: menu-dissapearance 0.7s reverse linear both;
+}
+
+@keyframes menu-dissapearance {
+    0% {
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: -7.5vw;
+    }
+
+    100% {
+        margin-left: -15vw;
+    }
+}
+
+.menu {
+    margin: 0;
+    height: 100vh;
+    width: 15vw;
+    background-color: rgba(10, 9, 9, 0.637);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.menu-fixed {
+    position: fixed;
+    margin: 0;
+    margin-top: -7vh;
+}
+
+.menu-shouldPinBanner {
+    position: fixed;
+    margin: 0;
+}
+
+.menu-item {
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.menu-item-content-total-count {
+    margin-left: 0.5vw;
+    text-align: center;
+}
+
+.menu-item-groups-total-count {
+    margin-left: 0.2vw;
+    text-align: center;
+}
+
+.menu-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #c0b7b7;
+    transition: 0.7s;
+}
+
+.menu-link:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+.menu-link-active {
+    color: rgba(255, 0, 0, 0.8);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+/* here is bug with scrollbar if use margin-left or right need to think smth*/
+.menu-navigation-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.menu-navigation-item {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #c0b7b7;
+    margin: 1vh 0.5vw 1vh 0.5vw;
+    transition: 0.3s;
+}
+
+.menu-navigation-item-active {
+    color: rgba(255, 0, 0, 0.8);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+/* settings design here */
+/* settings design here */
+/* settings design here */
+.general-item,
+.settings-item {
+    text-align: center;
+    margin: 3vh 1vw 0 1vw;
+}
+
+.settings-select-outer {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+.settings-select-title {
+    margin-bottom: 1vh;
+}
+
+.settings-select-inner {
+    display: block;
+    height: 8vh;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(104, 99, 99), 0 0 1em rgb(104, 99, 99);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.settings-item select::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+.settings-item select::-webkit-scrollbar-track {
+    background-color: rgba(90, 88, 88, 0.8);
+    border-radius: 5px;
+}
+
+.settings-item select::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 26, 26, 0.596);
+    border-radius: 5px;
+}
+
+.settings-item select::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+.settings-item option:checked {
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+}
+
+.settings-item option:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+}
+
+select[name="language"] option,
+select[name="theme"] option,
+select[name="numberOfPosts"] option,
+select[name="sizeOfPosts"] option,
+select[name="fullOccupiedSpaceOfPosts"] option,
+select[name="viewOfPosts"] option,
+select[name="infoOfPosts"] option,
+select[name="sortPostsBy"] option,
+select[name="sortPostsOrder"] option,
+select[name="dateFormat"] option,
+select[name="sizeFormat"] option,
+select[name="authorLinksFormat"] option,
+select[name="colorfulContentTypeTitles"] option {
+    max-width: 100%;
+}
+
+select[name="language"],
+select[name="theme"],
+select[name="numberOfPosts"],
+select[name="sizeOfPosts"],
+select[name="fullOccupiedSpaceOfPosts"],
+select[name="viewOfPosts"],
+select[name="infoOfPosts"],
+select[name="sortPostsBy"],
+select[name="sortPostsOrder"],
+select[name="dateFormat"],
+select[name="sizeFormat"],
+select[name="authorLinksFormat"],
+select[name="colorfulContentTypeTitles"] {
+    width: 96%;
+    height: 90%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.settings-item select {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.settings-item option {
+    /* dangerous ones???
+    margin-top: 1vh;
+    padding: 0.9vh;*/
+    max-width: 100%;
+    transition: 0.4s;
+    border-radius: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+/* settings design here */
+/* settings design here */
+/* settings design here */
+
+/* smth */
+.menu-select-outer {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+.menu-select-title {
+    margin-bottom: 1vh;
+}
+
+.menu-select-inner {
+    display: block;
+    height: 8vh;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(104, 99, 99), 0 0 1em rgb(104, 99, 99);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+select[name="authorContentType"] option {
+    max-width: 100%;
+}
+
+select[name="authorContentType"] {
+    width: 96%;
+    height: 90%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.content-type-item {
+    text-align: center;
+    margin: 2vh 1vw 0 1vw;
+}
+
+.content-type-item select::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+.content-type-item select::-webkit-scrollbar-track {
+    background-color: rgba(90, 88, 88, 0.8);
+    border-radius: 5px;
+}
+
+.content-type-item select::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 26, 26, 0.596);
+    border-radius: 5px;
+}
+
+.content-type-item select::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+.content-type-item option:checked {
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+}
+
+.content-type-item option:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+}
+
+.content-type-item select {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.content-type-item option {
+    /* dangerous ones???
+    margin-top: 1vh;
+    padding: 0.9vh;*/
+    max-width: 100%;
+    transition: 0.4s;
+    border-radius: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* here is bug with scrollbar if use margin-left or right need to think smth*/
+.menu-content-type-container {
+    margin-bottom: 3vh;
+    white-space: nowrap;
+}
+
+.menu-content-type-container::-webkit-scrollbar {
+    height: 0.5vh;
+}
+
+.menu-content-type-container::-webkit-scrollbar-track {
+    background-color: rgba(83, 83, 83, 0.3);
+}
+
+.menu-content-type-container::-webkit-scrollbar-thumb {
+    background-color: rgba(24, 23, 23, 0.537);
+    border-radius: 0px;
+}
+
+.menu-content-type-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+/* smth */
+.menu-navigation-item:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8),
+        0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+.menu-navigation-container::-webkit-scrollbar {
+    height: 0.5vh;
+}
+
+.menu-navigation-container::-webkit-scrollbar-track {
+    background-color: rgba(83, 83, 83, 0.3);
+}
+
+.menu-navigation-container::-webkit-scrollbar-thumb {
+    background-color: rgba(24, 23, 23, 0.537);
+    border-radius: 0px;
+}
+
+.menu-navigation-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+.menu::-webkit-scrollbar-track {
+    background-color: rgba(83, 83, 83, 0.3);
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: rgba(24, 23, 23, 0.537);
+    border-radius: 0px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+.menu-content {
+    word-wrap: break-word;
+    margin: 0.25vh 1.25vw 0.25vh 1.5vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-container-shouldPinBanner {
+    margin-top: 7vh;
+}
+
+.main-content-container {
+    flex-grow: 1;
+    flex-basis: 84vw;
+}
+
+.main-content {
+    margin: 1.25vw 0.75vw 0.25vh 1.25vw;
+}
+
+.menu-button {
+    margin-top: 2em;
+    height: 3em;
+    width: 100%;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(104, 99, 99), 0 0 1em rgb(104, 99, 99);
+    font-family: Arial;
+    transition: 1s;
+}
+
+.menu-button:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navigation-item {
+    margin-top: 1vh;
+    text-align: center;
+    width: 100%;
+}
+
+.navigation-item a {
+    color: #c0b7b7;
+    transition: 0.7s;
+    text-decoration: none;
+}
+
+.navigation-item a:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+/*custom select*/
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(104 99 99), 0 0 1em rgb(104 99 99);
+    text-shadow: 0 0 1em rgb(104 99 99);
+    transition: box-shadow 0.6s, color 0.6s, text-shadow 0.6s, background-color 0.6s;
+}
+
+.select-selected:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #c0b7b7 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div,
+.select-selected {
+    padding: 14px 1em;
+    border-radius: 10px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    word-break: break-word;
+    white-space: break-spaces;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 1);
+    /* background-color: rgba(15, 15, 15, 0.541);
+    это можно юзать на popupах
+    backdrop-filter: blur(9.6px);*/
+    box-shadow: inset 0 0 1em rgb(104 99 99), 0 0 1em rgb(104 99 99);
+    text-shadow: 0 0 1em rgb(104 99 99);
+}
+
+.select-items div {
+    transition: 0.3s;
+}
+
+.select-hide {
+    display: none;
+}
+
+.same-as-selected {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.select-items div:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}

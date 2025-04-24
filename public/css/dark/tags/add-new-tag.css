@@ -1,0 +1,55 @@
+/* add new tag page*/
+/* add new tag page*/
+/* add new tag page*/
+.upload-tag-container,
+#upload-tag-form {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#upload-tag-form {
+    margin-bottom: 5vh;
+}
+
+#upload-tag-form input[name="tagName"] {
+    width: 20vw;
+}
+
+#upload-tag-form input {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#upload-tag-form input:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#upload-tag-form input[name="tagName"]:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* add new tag page*/
+/* add new tag page*/
+/* add new tag page*/

@@ -1,0 +1,40 @@
+<div class="upload-author-container">
+    <button id="need-more-links"><%= needMoreLinks %></button>
+
+    <form
+        action="<%= uploadAuthorAction %>"
+        id="upload-author-form"
+        method="post"
+        autocomplete="off"
+    >
+        <div class="next-container-item">
+            <div class="content-info-title"><%= authorName %>*</div>
+            <input name="authorName" />
+        </div>
+
+        <div class="next-container-item author-avatar-container">
+            <div>
+                <div class="content-info-title"><%= avatarLink %></div>
+                <input name="avatarLink" />
+            </div>
+
+            <div>
+                <div class="content-info-title"><%= headerImageLink %></div>
+                <input name="headerImageLink" />
+            </div>
+        </div>
+
+        <div class="next-container-item">
+            <div class="content-info-title"><%= authorLink %></div>
+            <div id="links-area" class="author-links-container"></div>
+        </div>
+
+        <div class="next-container-item">* - <%= required %></div>
+
+        <div class="next-container-item"><%= authorLinksUploadInfo %></div>
+
+        <div class="next-container-item" id="status-container"></div>
+
+        <input type="submit" class="next-container-item" value="<%= readyToAdd %>" />
+    </form>
+</div>

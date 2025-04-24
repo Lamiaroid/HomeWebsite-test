@@ -1,0 +1,6 @@
+logs/*
+database/data/*
+database/backup/*
+
+public/external/fontawesome
+public/Content/

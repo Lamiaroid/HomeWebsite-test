@@ -1,0 +1,168 @@
+/* change group info page*/
+/* change group info page*/
+/* change group info page*/
+.group-name-info-for-view {
+    margin-right: 10vw;
+}
+.change-group-info-container {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.group-name-changable-info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+select[name="groupNameSelector"]::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+select[name="groupNameSelector"]::-webkit-scrollbar-track {
+    background-color: rgba(90, 88, 88, 0.8);
+    border-radius: 5px;
+}
+
+select[name="groupNameSelector"]::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 26, 26, 0.596);
+    border-radius: 5px;
+}
+
+select[name="groupNameSelector"]::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+select[name="groupNameSelector"] option:checked {
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+}
+
+select[name="groupNameSelector"] option:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+}
+
+select[name="groupNameSelector"] option {
+    margin-top: 1vh;
+    padding: 0.9vh;
+    height: 100%;
+    max-width: 100%;
+    transition: 0.4s;
+    border-radius: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.group-name-outer {
+    align-self: center;
+}
+
+select[name="groupNameSelector"] {
+    width: 30vw;
+    max-height: 100%;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.group-name-inner {
+    display: block;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.group-preview-image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#groupPreviewImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.preview-center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#delete-group-preview,
+#update-group-info-form input {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#delete-group-preview:hover,
+#update-group-info-form input:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#update-group-info-form input[name="groupName"] {
+    width: 30vw;
+}
+
+#update-group-info-form input[name="groupName"]:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+input[name="groupPreview"]::-webkit-file-upload-button {
+    width: 0;
+    visibility: hidden;
+}
+/* change group info page*/
+/* change group info page*/
+/* change group info page*/

@@ -1,0 +1,34 @@
+<div class="panel invisible">
+    <div class="panel-content">
+        <!--read from client or server current values??? this must be from server, i guess, because there are a lot items that will be received from it-->
+        <!--here we put all settings i guess-->
+
+        <!--there is a huge problem when changing settings page that previous settings are deleted and not stored, should we store options in js after smth changes with the help of juqery???-->
+        <div class="panel-inside invisible">
+            <%= panelContent %>
+            <!--with such design we will have problems in preview in change group info and maybe in other places-->
+        </div>
+
+        <div class="panel-bottom">
+            <div class="panel-navigation">
+                <div id="panel-move-left" class="unselectable">➤</div>
+                <div id="panel-move-right" class="unselectable">➤</div>
+            </div>
+
+            <div class="panel-item general-item">
+                <form
+                    action="/library/save-settings"
+                    method="post"
+                    name="saveSettingsForm"
+                    id="save-settings-form"
+                >
+                    <button class="panel-button">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-activator">
+        <i class="arrow right"></i>
+    </div>
+</div>

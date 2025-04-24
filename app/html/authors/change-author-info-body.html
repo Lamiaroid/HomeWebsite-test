@@ -1,0 +1,63 @@
+<div class="change-author-info-container">
+    <div class="change-author-header">
+        <button id="need-more-links" disabled><%= needMoreLinks %></button>
+
+        <div class="author-name-outer">
+            <div class="author-name-inner">
+                <select id="author-name-selector" name="authorNameSelector" size="4">
+                    <%= authorsList %>
+                </select>
+            </div>
+        </div>
+
+        <form action="<%= deleteAuthorAction %>" method="post" id="delete-author-form">
+            <input id="delete-author" type="submit" value="<%= deleteAuthor %>" disabled />
+        </form>
+    </div>
+
+    <form
+        action="<%= updateAuthorAction %>"
+        id="update-author-form"
+        method="post"
+        autocomplete="off"
+    >
+        <div class="next-container-item">
+            <div class="content-info-title"><%= authorName %>*</div>
+            <input id="author-name" name="authorName" disabled />
+            <input class="secret" id="author-secret" name="authorOriginalName" />
+        </div>
+
+        <div class="next-container-item author-avatar-container">
+            <div>
+                <div class="content-info-title"><%= authorAvatarLink %></div>
+                <input id="author-avatar-link" name="authorAvatarLink" disabled />
+            </div>
+
+            <div>
+                <div class="content-info-title"><%= authorHeaderImageLink %></div>
+                <input id="author-header-image-link" name="authorHeaderImageLink" disabled />
+            </div>
+        </div>
+
+        <div class="next-container-item">
+            <div class="content-info-title"><%= authorLink %></div>
+            <div id="links-area" class="author-links-container"></div>
+
+            <div class="secret" id="links-secret-area"></div>
+        </div>
+
+        <div class="next-container-item">* - <%= required %></div>
+
+        <div id="additional-info-container" class="next-container-item"><%= additionalInfo %></div>
+
+        <div class="next-container-item" id="status-container"></div>
+
+        <input
+            class="next-container-item"
+            id="ready-to-change-button"
+            type="submit"
+            value="<%= readyToChange %>"
+            disabled
+        />
+    </form>
+</div>

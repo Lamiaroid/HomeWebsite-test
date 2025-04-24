@@ -1,0 +1,39 @@
+<div class="post-option-dialog-area-default">
+    <div class="close-post-option-dialog unselectable">❌</div>
+    <form
+        id="content-editing-preview-form"
+        action="<%= contentEditingPreviewFormAction %>"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off"
+    >
+        <div class="group-preview-image-container">
+            <img class="preview-center" id="groupPreviewImage" src="<%= contentPreviewPath %>" />
+            <div class="no-preview-title<%= hasPreview %>"><%= noPreview %></div>
+        </div>
+
+        <div class="next-container-item">
+            <div class="content-preview">
+                <div class="content-info-title"><%= newPreview %>*</div>
+                <input name="contentPreview" id="content-preview" type="file" />
+            </div>
+        </div>
+
+        <div class="next-container-item">* - <%= required %></div>
+
+        <div class="next-container-item" id="status-container"></div>
+
+        <input class="next-container-item" type="submit" value="<%= readyToAdd %>" />
+    </form>
+
+    <div class="extra-preview-actions-area next-container-item">
+        <button id="delete-content-preview"><%= deletePreview %></button>
+        <div class="content-info-container-inner">
+            <div class="content-name">
+                <div class="content-info-title"><%= createPreviewFromMoment %></div>
+                <input id="content-name" name="contentPreviewFromMoment" />
+                <button id="default-content-preview"><%= defaultPreview %></button>
+            </div>
+        </div>
+    </div>
+</div>

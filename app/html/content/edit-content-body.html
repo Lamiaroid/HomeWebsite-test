@@ -1,0 +1,156 @@
+<div class="post-option-dialog-area-default">
+    <div class="close-post-option-dialog unselectable">❌</div>
+    <form
+        id="content-editing-form"
+        action="<%= contentEditingFormAction %>"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off"
+    >
+        <div class="content-info-container">
+            <div class="content-info-container-column">
+                <div class="content-info-container-inner">
+                    <div class="creation-date">
+                        <div class="content-info-title"><%= creationDate %></div>
+                        <input
+                            type="date"
+                            name="contentCreationDate"
+                            min="1900-01-01"
+                            max="2100-01-01"
+                            value="<%= creationDateValue %>"
+                        />
+                    </div>
+
+                    <div class="content-link-to-original">
+                        <div class="content-info-title"><%= linkToOriginal %></div>
+                        <input
+                            id="content-link-to-original"
+                            name="contentLinkToOriginal"
+                            value="<%= linkToOriginalValue %>"
+                        />
+                    </div>
+                </div>
+
+                <div class="content-info-container-inner">
+                    <div class="content-name">
+                        <div class="content-info-title"><%= contentName %>*</div>
+                        <input
+                            id="content-name"
+                            name="contentName"
+                            value="<%= contentNameValue %>"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-author-outer">
+                <div class="content-info-title"><%= author %></div>
+                <div class="content-author-inner">
+                    <select name="contentAuthor" size="4">
+                        <%= authorsList %>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-container-item">* - <%= required %></div>
+
+        <div
+            class="content-info-container-inner content-info-container-description next-container-item"
+        >
+            <div class="content-description">
+                <div class="content-description-outer">
+                    <div class="content-info-title"><%= description %></div>
+                    <div class="content-description-inner content-description-inner-light">
+                        <!--this textarea must be exactly like this to avoid unwanted extraspaces-->
+                        <textarea id="content-description" name="contentDescription">
+<%= descriptionValue %></textarea
+                        >
+                    </div>
+                    <div class="content-editor-tools">
+                        <button class="content-editor-button" id="content-editor-bold">
+                            <b>B</b>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-italic">
+                            <i>B</i>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-paragraph">
+                            <div>P</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h1">
+                            <div>h1</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h2">
+                            <div>h2</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h3">
+                            <div>h3</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h4">
+                            <div>h4</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h5">
+                            <div>h5</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-h6">
+                            <div>h6</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-center">
+                            <div>Center</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-right">
+                            <div>Right</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-hyperlink">
+                            <div>Hyperlink</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-image">
+                            <div>Image</div>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-color">
+                            <input
+                                class="content-editor-color-input"
+                                type="color"
+                                value="#ff0000"
+                            />
+                            <span>Color</span>
+                        </button>
+                        <button class="content-editor-button" id="content-editor-font-size">
+                            <input
+                                class="content-editor-font-size-input"
+                                type="number"
+                                value="16"
+                            />
+                            <span>Font size (px)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-editor-settings">
+                <div class="content-info-title invisible">X</div>
+                <button
+                    class="content-editor-setting content-editor-setting-tools content-editor-setting-selected"
+                >
+                    ⚙
+                </button>
+                <button
+                    class="content-editor-setting content-editor-setting-light content-editor-setting-selected"
+                >
+                    💡
+                </button>
+                <button class="content-editor-setting content-editor-setting-scroll">↕</button>
+            </div>
+        </div>
+
+        <div>Предпросмотр</div>
+        <div class="content-info-container next-container-item">
+            <div id="content-editor" class="content-editor"></div>
+        </div>
+
+        <div id="secret-edit-content-type" class="invisible" info="<%= contentTypeEdit %>"></div>
+
+        <div class="next-container-item" id="status-container"></div>
+
+        <input class="next-container-item" type="submit" value="<%= readyToAdd %>" />
+    </form>
+</div>

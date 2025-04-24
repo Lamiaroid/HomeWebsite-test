@@ -1,0 +1,89 @@
+/* add new author page*/
+/* add new author page*/
+/* add new author page*/
+.upload-author-container,
+#upload-author-form {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#upload-author-form {
+    margin-bottom: 5vh;
+}
+
+#upload-author-form input[name="authorName"],
+#upload-author-form input[name="avatarLink"],
+#upload-author-form input[name="headerImageLink"] {
+    width: 20vw;
+}
+
+#need-more-links,
+#upload-author-form input {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#need-more-links {
+    align-self: flex-start;
+}
+
+#need-more-links:hover,
+#upload-author-form input:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#upload-author-form input.author-link:focus,
+#upload-author-form input[name="authorName"]:focus,
+#upload-author-form input[name="avatarLink"]:focus,
+#upload-author-form input[name="headerImageLink"]:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.author-avatar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.author-links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.author-link {
+    width: 15vw;
+    margin-top: 2vh;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+/* add new author page*/
+/* add new author page*/
+/* add new author page*/

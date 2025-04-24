@@ -1,0 +1,25 @@
+<div class="container page500" id="page500-info">
+    <h1 align="center" class="page500-anim">500</h1>
+    <h1 align="center">Похоже, что сейчас у нас возникли проблемы.</h1>
+    <h1 align="center">Наши специалисты уже занимаются этим вопросом.</h1>
+    <br />
+</div>
+
+<canvas id="matrix-canvas"></canvas>
+
+<script src="/Scripts/matrix-rain.js"></script>
+
+<script>
+    setInterval(function () {
+        matrixRain("rgba(0, 0, 0, 0.05)", "rgb(194, 153, 255)", 1, "red", 15);
+    }, 33);
+</script>
+
+<img
+    src="/Arts/blast.png"
+    width="1500"
+    height="1100"
+    class="page500 unselectable"
+    id="page500-img-blast"
+/>
+<img src="/Arts/warrior.png" class="page500 unselectable" id="page500-img-warrior" />

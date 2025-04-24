@@ -1,0 +1,212 @@
+<form
+    id="content-uploading-form"
+    action="<%= contentUploadingFormAction %>"
+    method="post"
+    enctype="multipart/form-data"
+    autocomplete="off"
+>
+    <div class="content-info-container">
+        <div class="content-info-container-column">
+            <div class="content-info-container">
+                <div class="creation-date">
+                    <div class="content-info-title"><%= creationDate %></div>
+                    <input
+                        type="date"
+                        name="contentCreationDate"
+                        min="1900-01-01"
+                        max="2100-01-01"
+                    />
+                </div>
+
+                <div class="content-info-container-inner">
+                    <div class="content-name">
+                        <div class="content-info-title"><%= contentName %></div>
+                        <input id="content-name" name="contentName" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-info-container">
+                <div class="content-preview">
+                    <div class="content-info-title invisible">-</div>
+                    <div class="content-info-title"><%= preview %></div>
+                    <input type="file" id="content-preview" name="contentPreview" />
+                </div>
+
+                <div class="content-info-container-inner">
+                    <div class="content-files-to-add">
+                        <div class="content-info-title"><%= filesToAdd %>*</div>
+
+                        <div id="file-count-selector" class="row-container">
+                            <label
+                                class="radio-button-composition file-single-composition content-info-title"
+                                for="fileSingle"
+                            >
+                                <div
+                                    class="round-radio file-single-radio"
+                                    name="fileCountSelector"
+                                ></div>
+                                <input type="radio" id="fileSingle" name="fileCountSelector" />
+                                <div><%= singleFile %></div>
+                            </label>
+
+                            <label
+                                class="radio-button-composition file-multiple-composition content-info-title"
+                                for="fileMultiple"
+                            >
+                                <div
+                                    class="round-radio file-multiple-radio"
+                                    name="fileCountSelector"
+                                ></div>
+                                <input
+                                    type="radio"
+                                    id="fileMultiple"
+                                    name="fileCountSelector"
+                                    checked
+                                />
+                                <div><%= multipleFiles %></div>
+                            </label>
+                        </div>
+
+                        <input
+                            class="invisible"
+                            type="file"
+                            id="content-file-single"
+                            name="contentFileSingle"
+                            disabled
+                        />
+                        <input
+                            type="file"
+                            id="content-file-multiple"
+                            name="contentFileMultiple"
+                            multiple
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-author-outer">
+            <div class="content-info-title"><%= author %></div>
+            <div class="content-author-inner">
+                <select name="contentAuthor" size="4">
+                    <option value="<%= noAuthorValue %>" selected>
+                        --(<%= noContentAuthorOption %>)--
+                    </option>
+                    <%= authorsList %>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-info-container next-container-item">
+        <div class="content-type-outer">
+            <div class="content-info-title"><%= contentType %>*</div>
+            <div class="content-type-inner">
+                <select id="content-type" name="contentType" size="4" required>
+                    <%= contentTypesList %>
+                </select>
+            </div>
+        </div>
+
+        <div class="content-info-container-inner groups-container content-info-center invisible">
+            <div id="content-group-selector">
+                <label class="radio-button-composition group-new-composition" for="groupNew">
+                    <div class="round-radio group-new-radio" name="groupSelector"></div>
+                    <input type="radio" id="groupNew" name="groupSelector" disabled checked />
+                    <div><%= createNewGroup %></div>
+                </label>
+
+                <label
+                    class="radio-button-composition group-existing-composition"
+                    for="groupExisting"
+                >
+                    <div class="round-radio group-existing-radio" name="groupSelector"></div>
+                    <input type="radio" id="groupExisting" name="groupSelector" disabled />
+                    <div><%= addToExistingGroup %></div>
+                </label>
+            </div>
+        </div>
+
+        <div class="content-description">
+            <div class="content-description-outer">
+                <div class="content-info-title"><%= description %></div>
+                <div class="content-description-inner">
+                    <textarea id="content-description" name="contentDescription"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-link-to-original next-container-item">
+        <div class="content-link-to-original-container">
+            <span class="content-info-title"><%= linkToOriginal %></span>
+            <input id="content-link-to-original" name="contentLinkToOriginal" />
+        </div>
+    </div>
+
+    <div class="content-info-container groups-container next-container-item invisible">
+        <div class="content-group-name-new row-container content-info-title-composition">
+            <div class="content-info-row-title"><%= newGroupName %>*</div>
+            <input id="content-group-name-new" name="contentGroupNameNew" disabled />
+        </div>
+
+        <div class="content-group-name-existing row-container content-info-title-composition">
+            <div class="content-info-row-title"><%= chooseExistingGroupName %>*</div>
+            <div class="content-group-name-existing-outer">
+                <div class="content-group-name-existing-inner">
+                    <select
+                        id="content-group-name-existing"
+                        name="contentGroupNameExisting"
+                        size="4"
+                        disabled
+                    >
+                        <%= groupNamesList %>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-number-in-group">
+            <div class="content-number-in-group-container">
+                <div class="content-info-title"><%= numberInGroup %></div>
+                <input
+                    type="number"
+                    id="content-number-in-group"
+                    name="contentNumberInGroup"
+                    disabled
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="next-container-item">* - <%= required %></div>
+
+    <div class="next-container-item" id="multiple-files-upload-warning">
+        <%= multipleFilesUploadWarning %>
+    </div>
+
+    <!--add title to progress bars and not show all 3 together-->
+    <div class="next-container-item upload-progress-bar-container">
+        <div class="upload-progress-bar-title content-info-title"><%= loading %></div>
+        <div id="upload-progress-bar">
+            <div id="upload-progress-bar-value" class="upload-progress-bar-value"></div>
+            <div id="upload-progress-bar-indicator" class="upload-progress-bar-indicator"></div>
+        </div>
+    </div>
+
+    <div class="next-container-item processing-progress-bar-container">
+        <div class="processing-progress-bar-title content-info-title"><%= processing %></div>
+        <div id="processing-progress-bar">
+            <div id="processing-progress-bar-value" class="processing-progress-bar-value"></div>
+            <div
+                id="processing-progress-bar-indicator"
+                class="processing-progress-bar-indicator"
+            ></div>
+        </div>
+    </div>
+
+    <div class="next-container-item" id="status-container"></div>
+
+    <input class="next-container-item" type="submit" value="<%= readyToAdd %>" />
+</form>

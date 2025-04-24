@@ -1,0 +1,419 @@
+/* add new content page*/
+/* add new content page*/
+/* add new content page*/
+/* maybe i should shange 2em in red text shadow to 1em most places */
+/* need to work with colors, sizes, and spacings (padings in select) */
+.content-info-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-info-container-inner {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.content-info-center {
+    align-items: center;
+}
+
+.content-info-container-column {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-info-row-title {
+    margin-right: 1vw;
+}
+
+.content-info-title-composition {
+    margin-top: calc(1vh + 16px);
+}
+
+.content-name,
+.creation-date,
+.content-author-outer,
+.content-type-outer,
+.content-description-outer,
+.content-group-name-existing-outer,
+.content-files-to-add,
+.content-preview,
+.content-description,
+.content-number-in-group {
+    text-align: center;
+}
+
+.content-preview {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+.content-group-name-existing {
+    display: inline;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#content-group-name-new {
+    width: 30vw;
+}
+
+#content-name {
+    width: 25vw;
+}
+
+#content-uploading-form {
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.content-description-inner {
+    width: 40vw;
+    height: 20vh;
+}
+
+#content-description {
+    width: 96%;
+    height: 80%;
+}
+
+.content-author-inner {
+    height: 20vh;
+}
+
+.content-type-inner {
+    height: 20vh;
+}
+
+#content-uploading-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+/*#content-name*/
+#content-uploading-form select {
+    display: block;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.content-number-in-group-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.round-radio {
+    height: 12px;
+    width: 12px;
+    content: "";
+    background: radial-gradient(
+        circle at 50%,
+        rgba(27, 27, 27, 0.733),
+        rgb(104, 99, 99) 50%,
+        rgba(27, 27, 27, 0.733) 75%
+    );
+    box-shadow: 0 0 0.7em rgba(27, 27, 27, 0.733);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.group-new-radio-checked,
+.group-existing-radio-checked,
+.file-multiple-radio-checked,
+.file-single-radio-checked {
+    background: radial-gradient(circle at 50%, red, rgba(27, 27, 27, 0.733) 50%, red 75%);
+    box-shadow: 0 0 0.7em red;
+}
+
+.group-new-composition:hover .round-radio,
+.group-existing-composition:hover .round-radio,
+.file-single-composition:hover .round-radio,
+.file-multiple-composition:hover .round-radio {
+    background: radial-gradient(
+        circle at 50%,
+        rgba(255, 100, 0, 1),
+        rgba(27, 27, 27, 0.733) 50%,
+        rgba(255, 100, 0, 1) 75%
+    );
+    box-shadow: 0 0 0.7em rgba(255, 100, 0, 1);
+    transition: 0.4s;
+}
+
+#groupNew,
+#groupExisting,
+#fileSingle,
+#fileMultiple {
+    width: 0;
+    height: 0;
+}
+
+.radio-button-composition {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: stretch;
+}
+
+input[name="contentFileSingle"]::-webkit-file-upload-button,
+input[name="contentFileMultiple"]::-webkit-file-upload-button,
+input[name="contentPreview"]::-webkit-file-upload-button {
+    width: 0;
+    visibility: hidden;
+}
+
+input[name="contentFileSingle"]::before,
+input[name="contentFileMultiple"]::before,
+input[name="contentPreview"]::before {
+    display: inline-block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select[name="contentGroupNameExisting"] {
+    width: 30vw;
+    max-height: 100%;
+}
+
+select[name="contentAuthor"] {
+    width: 30vw;
+    max-height: 100%;
+}
+
+select[name="contentType"] {
+    width: 15vw;
+    max-height: 100%;
+}
+
+select[name="contentGroupNameExisting"] option,
+select[name="contentType"] option,
+select[name="contentAuthor"] option {
+    max-width: 100%;
+}
+
+select[name="contentAuthor"],
+select[name="contentType"],
+select[name="contentGroupNameExisting"] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#content-uploading-form select::-webkit-scrollbar,
+#content-uploading-form textarea::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+#content-uploading-form select::-webkit-scrollbar-track,
+#content-uploading-form textarea::-webkit-scrollbar-track {
+    background-color: rgba(90, 88, 88, 0.8);
+    border-radius: 5px;
+}
+
+#content-uploading-form select::-webkit-scrollbar-thumb,
+#content-uploading-form textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 26, 26, 0.596);
+    border-radius: 5px;
+}
+
+#content-uploading-form select::-webkit-scrollbar-thumb:hover,
+#content-uploading-form textarea::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+#content-uploading-form option:checked {
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+}
+
+#content-uploading-form option:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+}
+
+#content-uploading-form option {
+    margin-top: 1vh;
+    padding: 0.9vh;
+    height: 100%;
+    max-width: 100%;
+    transition: 0.4s;
+    border-radius: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.content-author-inner,
+.content-type-inner,
+.content-description-inner,
+.content-group-name-existing-inner {
+    display: block;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#content-uploading-form textarea {
+    resize: none;
+}
+
+#content-uploading-form input {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.content-description-inner {
+    cursor: text;
+}
+
+#content-uploading-form textarea {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 16px;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#content-description {
+    color: #c0b7b7;
+}
+
+.content-link-to-original {
+    align-self: flex-end;
+}
+
+#content-link-to-original {
+    margin-left: 1vw;
+    width: 31vw;
+}
+
+#content-uploading-form input:hover,
+.content-description-inner-hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-description-inner:hover #content-description,
+#content-uploading-form textarea[name="contentDescription"]:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+#content-uploading-form input[name="contentName"]:focus,
+#content-uploading-form input[name="creationDate"]:focus,
+#content-uploading-form input[name="contentGroupNameNew"]:focus,
+#content-uploading-form input[name="contentNumberInGroup"]:focus,
+#content-uploading-form input[name="contentLinkToOriginal"]:focus,
+.content-description-inner-focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.processing-progress-bar-indicator,
+.upload-progress-bar-indicator {
+    width: 0;
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0);
+    user-select: none;
+    text-align: center;
+    transition: width 0.2s linear;
+}
+
+#processing-progress-bar,
+#upload-progress-bar {
+    position: relative;
+    width: 50vw;
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.processing-progress-bar-value,
+.upload-progress-bar-value {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.processing-progress-bar-title,
+.upload-progress-bar-title {
+    text-align: center;
+}
+
+.processing-progress-bar-container,
+.upload-progress-bar-container {
+    display: none;
+}
+/* add new content page*/
+/* add new content page*/
+/* add new content page*/

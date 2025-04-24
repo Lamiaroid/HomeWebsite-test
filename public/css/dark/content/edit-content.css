@@ -1,0 +1,347 @@
+/* add new content page*/
+/* add new content page*/
+/* add new content page*/
+/* maybe i should shange 2em in red text shadow to 1em most places */
+/* need to work with colors, sizes, and spacings (padings in select) */
+.content-info-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-info-container-inner {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.content-info-container-description {
+    justify-content: center;
+}
+
+.content-info-center {
+    align-items: center;
+}
+
+.content-info-container-column {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-info-row-title {
+    margin-right: 1vw;
+}
+
+.content-info-title-composition {
+    margin-top: calc(1vh + 16px);
+}
+
+.content-name,
+.creation-date,
+.content-author-outer,
+.content-description-outer,
+.content-description,
+.content-link-to-original {
+    text-align: center;
+}
+
+.content-author-outer {
+    margin-right: 10%;
+}
+
+#content-name {
+    width: 25vw;
+}
+
+#content-editing-form {
+    width: 100%;
+}
+
+.content-description-inner {
+    width: 90vw;
+    height: 40vh;
+}
+
+#content-description {
+    width: 96%;
+    height: 94%;
+}
+
+#content-link-to-original {
+    width: 30vw;
+}
+
+.content-editor-scrollable {
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.content-editor-button {
+    padding: 14px 1em;
+    padding-left: 1em;
+    margin-top: 1vh;
+    margin-left: 0.25vw;
+    height: 6vh;
+    min-width: 6vh;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#content-editing-form input.content-editor-color-input {
+    height: 2vh;
+    padding: 0;
+}
+
+#content-editing-form input.content-editor-font-size-input {
+    width: 4vw;
+    height: 2vh;
+    padding: 0;
+}
+
+.content-editor-button:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-author-inner {
+    height: 20vh;
+}
+
+.content-type-inner {
+    height: 20vh;
+}
+
+#content-editing-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+#content-editing-form select {
+    display: block;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.content-editor {
+    font-size: 20px;
+    margin-left: 3%;
+    width: 94%;
+    word-break: break-word;
+    word-wrap: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select[name="contentAuthor"] {
+    width: 30vw;
+    max-height: 100%;
+}
+
+select[name="contentAuthor"] option {
+    max-width: 100%;
+}
+
+select[name="contentAuthor"] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#content-editing-form select::-webkit-scrollbar,
+#content-editing-form textarea::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+#content-editing-form select::-webkit-scrollbar-track,
+#content-editing-form textarea::-webkit-scrollbar-track {
+    background-color: rgba(90, 88, 88, 0.8);
+    border-radius: 5px;
+}
+
+#content-editing-form select::-webkit-scrollbar-thumb,
+#content-editing-form textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 26, 26, 0.596);
+    border-radius: 5px;
+}
+
+#content-editing-form select::-webkit-scrollbar-thumb:hover,
+#content-editing-form textarea::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 9, 9, 0.637);
+}
+
+#content-editing-form option:checked {
+    color: #c0b7b7;
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99), 0 0 0.7em rgb(104, 99, 99);
+}
+
+#content-editing-form option:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+}
+
+#content-editing-form option {
+    margin-top: 1vh;
+    padding: 0.9vh;
+    height: 100%;
+    max-width: 100%;
+    transition: 0.4s;
+    border-radius: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.content-author-inner,
+.content-description-inner {
+    display: block;
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#content-editing-form textarea {
+    resize: none;
+}
+
+.content-editor-settings {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: start;
+    margin-left: 0.5vw;
+}
+
+.content-editor-setting,
+#content-editing-form input {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c0b7b7;
+    background-color: rgba(15, 15, 15, 0.541);
+    box-shadow: inset 0 0 1em rgb(7, 7, 7), 0 0 1em rgb(7, 7, 7);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+.content-editor-setting {
+    margin-bottom: 0.5vh;
+    width: 50px;
+    height: 50px;
+}
+
+.content-description-inner {
+    cursor: text;
+}
+
+#content-editing-form textarea {
+    padding: 14px 1em;
+    padding-left: 1em;
+    font-size: 16px;
+    text-align: left;
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    transition: 0.6s;
+}
+
+#content-description {
+    color: #c0b7b7;
+}
+
+.content-editor-setting:hover,
+#content-editing-form input:hover,
+.content-description-inner-hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-editor-setting-selected {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-description-inner-light:hover #content-description,
+.content-description-inner-light #content-description:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+}
+
+/*.content-description-inner:hover #content-description,
+#content-editing-form #content-description:focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+}*/
+
+#content-editing-form input[name="contentName"]:focus,
+#content-editing-form input[name="creationDate"]:focus,
+#content-editing-form input[name="contentLinkToOriginal"]:focus,
+.content-description-inner-focus {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* add new content page*/
+/* add new content page*/
+/* add new content page*/

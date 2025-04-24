@@ -1,0 +1,13 @@
+<div class="upload-tag-container">
+    <form action="<%= uploadTagAction %>" id="upload-tag-form" method="post" autocomplete="off">
+        <div class="next-container-item">
+            <div class="content-info-title"><%= tagName %></div>
+            <input name="tagName" />
+        </div>
+
+        <!--maybe description later for different tag styles but not sure-->
+        <div class="next-container-item" id="status-container"></div>
+
+        <input type="submit" class="next-container-item" value="<%= readyToAdd %>" />
+    </form>
+</div>

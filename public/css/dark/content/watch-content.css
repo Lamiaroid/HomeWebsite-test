@@ -1,0 +1,329 @@
+.helper-area {
+    position: absolute;
+    width: 450px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: inset 0 0 0.7em rgba(255, 100, 0, 1), 0 0 0.7em rgba(255, 100, 0, 1);
+    z-index: 1100;
+}
+
+/* pages at the bottom styles*/
+/* pages at the bottom styles*/
+/* pages at the bottom styles*/
+.pages-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.page-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 3vw;
+    height: 3vw;
+    color: #c0b7b7;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: inset 0 0 1em rgb(104 99 99), 0 0 1em rgb(105 101 101);
+    text-shadow: 0 0 1em rgb(104, 99, 99);
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.6s;
+}
+
+.page-number:hover {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 100, 0, 1), 0 0 1em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.page-current {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 1em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* pages at the bottom styles*/
+/* pages at the bottom styles*/
+/* pages at the bottom styles*/
+
+/* this should be done in another way, i guess? not in pixels and be changable?*/
+.img-preview-text {
+    max-width: 100%;
+    max-height: 50px;
+}
+/*resizing option*/
+.img-preview-empty-small,
+.img-preview-small {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.img-preview-empty-medium,
+.img-preview-medium {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.img-preview-empty-big,
+.img-preview-big {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.img-preview-empty-huge,
+.img-preview-huge {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* page items style */
+/* page items style */
+/* page items style */
+.library-watch-item {
+    /* very intreseting setting, without it it takes last items as flex start, with it as flex-around but it also helps elements to take all the width, not only one they can take */
+    /* should add it to settings */
+    /*  flex-grow: 1; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 0.25vw;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.library-watch-item:hover {
+    /* это можно оставить для светлой темы*/
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    /*
+    background-color: rgba(15, 15, 15, 0.341);
+    box-shadow: inset 0 0 0.7em rgb(104, 99, 99);*/
+}
+
+.library-watch-item-allspace {
+    flex-grow: 1;
+}
+
+/* resing option */
+/* need to work with long texts like xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxSS and cut them like that xxx...xxxxSS*/
+.library-watch-item-small {
+    width: 150px;
+    height: 150px;
+}
+
+.library-watch-item-medium {
+    width: 250px;
+    height: 250px;
+}
+
+.library-watch-item-big {
+    width: 350px;
+    height: 350px;
+}
+
+.library-watch-item-huge {
+    width: 450px;
+    height: 450px;
+}
+/* resing option*/
+
+.library-watch-item-list {
+    width: 100%;
+}
+
+.special-post-mark {
+    position: absolute;
+    margin-top: 2.5%;
+    margin-left: 85%;
+    margin-right: 5px;
+    padding: 5px;
+    border-style: dashed;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 100, 0, 1);
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 1em rgba(255, 0, 0, 0.8), 0 0 2em rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 0 0.3em rgba(255, 100, 0, 1), 0 0 0.5em rgba(255, 100, 0, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+    word-break: break-word;
+    white-space: break-spaces;
+    font-weight: bold;
+}
+
+.special-post-mark-list {
+    margin-left: 7px;
+    margin-top: 0;
+}
+
+.watch-item-test {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #c0b7b7;
+    word-wrap: break-word;
+}
+
+.watch-item-test2 {
+    width: 100%;
+}
+
+.watch-item-test2-list {
+    display: flex;
+}
+
+.watch-item-list-title {
+    font-size: 32px;
+}
+
+.watch-item-list-descr {
+    margin-top: 3vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 20000;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    word-break: break-word;
+}
+
+.watch-item-list-description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.watch-item-list-anchor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.watch-item-list-image {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.watch-item-list-description-small {
+    height: 100px;
+}
+
+.watch-item-list-description-medium {
+    height: 200px;
+}
+
+.watch-item-list-description-big {
+    height: 300px;
+}
+
+.watch-item-list-description-huge {
+    height: 400px;
+}
+
+.watch-item-list-group,
+.watch-item-list-numberInGroup,
+.watch-item-list-author {
+    float: left;
+    margin-left: 1vw;
+}
+
+.watch-item-list-group,
+.watch-item-list-author {
+    position: relative;
+    z-index: 10000;
+}
+
+.watch-item-list-size,
+.watch-item-list-duration,
+.watch-item-list-resolution,
+.watch-item-list-type {
+    float: right;
+    margin-right: 1vw;
+}
+
+.watch-item-list-main-info {
+    margin-top: 1vh;
+}
+
+.watch-item-list-tags-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    overflow-y: auto;
+    min-height: 19%;
+}
+
+.watch-item-list-tag {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    background: linear-gradient(#232529, #06070d);
+    /*box-shadow: inset 0 0 0.5em rgba(45, 44, 94, 0.397), 0 0 0.3em rgba(45, 44, 94, 0.397);*/
+    box-shadow: inset 0 0 0.5em rgba(90, 90, 90, 0.297), 0 0 0.3em rgba(90, 90, 90, 0.297);
+    text-decoration: none;
+    color: #c0b7b7;
+    /* different tag styles needed as was planned */
+    /*background: linear-gradient(#314570, #010a38);*/
+    border-radius: 5px;
+    margin: 0.2vw;
+    transition: 0.2s;
+}
+
+.watch-item-list-tag:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0.5em rgba(255, 100, 0, 1), 0 0 0.3em rgba(255, 100, 0, 1);
+}
+
+.watch-item-list-tag .tag-name {
+    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+}
+
+.watch-item-list-tag:hover > .tag-name {
+    color: rgba(255, 100, 0, 1);
+    text-shadow: 0 0 0.3em rgba(255, 0, 0, 0.8), 0 0 0.3em rgba(255, 0, 0, 0.8);
+}
+
+.tag-name {
+    transition: 0.2s;
+    margin: 0.3vw;
+}
+
+#content-type-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+/* page items style */
+/* page items style */
+/* page items style */

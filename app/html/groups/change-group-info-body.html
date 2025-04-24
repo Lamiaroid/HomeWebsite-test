@@ -1,0 +1,55 @@
+<div class="change-group-info-container">
+    <div class="group-name-changable-info">
+        <div class="group-name-outer">
+            <div class="group-name-inner">
+                <select id="group-name-selector" name="groupNameSelector" size="4">
+                    <%= groupNamesList %>
+                </select>
+            </div>
+        </div>
+
+        <form
+            action="<%= updateGroupInfoAction %>"
+            id="update-group-info-form"
+            method="post"
+            enctype="multipart/form-data"
+            autocomplete="off"
+        >
+            <div class="next-container-item">
+                <div class="content-info-title"><%= groupName %></div>
+                <input id="group-name" name="groupName" disabled />
+            </div>
+
+            <div class="next-container-item">
+                <div class="content-info-title"><%= newPreview %></div>
+                <input name="groupPreview" id="group-preview" type="file" disabled />
+            </div>
+
+            <div class="next-container-item" id="status-container"></div>
+
+            <input
+                class="next-container-item"
+                id="ready-to-change-button"
+                type="submit"
+                value="<%= readyToChange %>"
+                disabled
+            />
+        </form>
+    </div>
+
+    <div class="group-name-info-for-view">
+        <div class="content-info-title">
+            <span id="contentTypeHeader"><%= contentType %>:</span>
+            <span id="contentType"></span>
+        </div>
+
+        <div class="group-preview-image-container">
+            <img class="preview-center" id="groupPreviewImage" />
+        </div>
+
+        <div class="delete-preview-area next-container-item">
+            <div class="no-preview-title"><%= noPreview %></div>
+            <button id="delete-group-preview" disabled><%= deletePreview %></button>
+        </div>
+    </div>
+</div>
